@@ -49,19 +49,24 @@
             <div class="row">
                 <div class="col-md-4">
                     <label for="kode_produk" class="form-label">Kode Produk</label>
-                    <input type="string" id="kode_produk" class="form-control">
+                    <input type="string" id="kode_produk" class="form-control" name="kode_produk" placeholder="Input Kode Produk">
                 </div>
                 <div class="col-md-4">
                     <label for="inama_produk" class="form-label">Nama Produk</label>
-                    <input type="string" id="inama_produk" class="form-control">
+                    <input type="string" id="inama_produk" class="form-control" name="nama_produk" placeholder="Input Nama Produk">
                 </div>
                 <div class="col-md-4">
                     <label for="jenis_produk" class="form-label">Jenis Produk</label>
-                    <input type="string" id="jenis_produk" class="form-control">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Pilih Produk</option>
+                        @foreach ($jeniss as $jenis)
+                            <option value="{{ $jenis }}">{{ $jenis }}</option>
+                        @endforeach
+                      </select>
                 </div>
                 <div class="col-md-6">
                     <label for="harga" class="form-label">Harga Produk</label>
-                    <input type="number" id="harga" class="form-control">
+                    <input type="number" id="harga" class="form-control" name="harga" placeholder="Input Harga">
                 </div>
                 <div class="col-md-6 mt-4 align-items-end d-flex">
                     <button type="submit" class="btn btn-success w-100">Simpan</button>
