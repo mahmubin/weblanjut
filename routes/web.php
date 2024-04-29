@@ -39,3 +39,7 @@ Route::get('/produk', function(){
 
     return view('produk', ['produks' => $produks]);
 });
+
+Route::get('/tambah-produk', function(){
+    return view('tambah');
+});
